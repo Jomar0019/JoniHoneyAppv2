@@ -1,13 +1,13 @@
 import 'package:flutter/material.dart';
 
-class HomeWidget extends StatefulWidget {
-  const HomeWidget({super.key});
+class BooksWidgets extends StatefulWidget {
+  const BooksWidgets({super.key});
 
   @override
-  State<HomeWidget> createState() => _HomeWidgetState();
+  State<BooksWidgets> createState() => _BooksWidgetsState();
 }
 
-class _HomeWidgetState extends State<HomeWidget> {
+class _BooksWidgetsState extends State<BooksWidgets> {
   @override
   Widget build(BuildContext context) {
     return GridView.builder(
@@ -21,10 +21,13 @@ class _HomeWidgetState extends State<HomeWidget> {
       ),
 
       itemBuilder: (BuildContext context, int index) {
-        return InkWell(onTap: () {}, child: ClipRRect(
-          borderRadius: BorderRadius.circular(10),
-          child: Image.asset('assets/images/HCH.png', fit: BoxFit.cover),
-        ),);
+        return InkWell(
+          onTap: () {},
+          child: ClipRRect(
+            borderRadius: BorderRadius.circular(10),
+            child: Image.asset('assets/images/TCD.png', fit: BoxFit.cover),
+          ),
+        );
       },
     );
   }

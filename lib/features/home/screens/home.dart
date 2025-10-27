@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:jonihoney_app/features/books/screens/books.dart';
+import 'package:jonihoney_app/features/home/widgets/home_widget.dart';
 
 class Home extends StatefulWidget {
   const Home({super.key});
@@ -11,8 +13,8 @@ class _HomeState extends State<Home> {
   int _selectedIndex = 0;
 
   static final List<Widget> _widgetOptions = <Widget>[
-    const Center(child: Text('Home')),
-    const Center(child: Text('Library')),
+    HomeWidget(),
+    Books(),
     const Center(child: Text('Search')),
     const Center(child: Text('Notification')),
   ];
