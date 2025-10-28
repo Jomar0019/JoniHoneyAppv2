@@ -1,0 +1,208 @@
+import 'package:flutter/material.dart';
+
+class BookDetails extends StatelessWidget {
+  const BookDetails({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      backgroundColor: Colors.white,
+      body: CustomScrollView(
+        slivers: <Widget>[
+          SliverAppBar(
+            floating: true,
+            snap: true,
+
+            leading: IconButton(
+              onPressed: () {
+                Navigator.pop(context);
+              },
+              icon: Icon(Icons.arrow_back),
+            ),
+            actions: [
+              Padding(
+                padding: const EdgeInsets.only(right: 20),
+                child: IconButton(
+                  onPressed: () {},
+                  icon: Icon(Icons.ios_share),
+                ),
+              ),
+            ],
+            elevation: 0,
+            backgroundColor: Colors.transparent,
+            surfaceTintColor: Colors.transparent,
+          ),
+
+          SliverToBoxAdapter(
+            child: Column(
+              children: [
+                Padding(
+                  padding: const EdgeInsets.all(20),
+                  child: Row(
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    children: [
+                      ClipRRect(
+                        borderRadius: BorderRadius.circular(12),
+                        child: Image.asset("assets/images/HCH.png", width: 160),
+                      ),
+                    ],
+                  ),
+                ),
+                Text(
+                  "His Cold Heart",
+                  style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold),
+                ),
+                SizedBox(height: 20),
+                Row(
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  children: [
+                    Container(
+                      padding: const EdgeInsets.only(left: 12, right: 12),
+                      child: Column(
+                        children: [
+                          Row(
+                            children: [
+                              Icon(
+                                Icons.visibility,
+                                color: Colors.grey,
+                                size: 18,
+                              ),
+                              SizedBox(width: 6),
+                              Text(
+                                'Reads',
+                                style: TextStyle(
+                                  color: Colors.grey,
+                                  fontSize: 12,
+                                ),
+                              ),
+                            ],
+                          ),
+                          SizedBox(height: 6),
+
+                          Text(
+                            '1.2M',
+                            style: TextStyle(
+                              fontSize: 16,
+                              fontWeight: FontWeight.bold,
+                            ),
+                            textAlign: TextAlign.center,
+                          ),
+                        ],
+                      ),
+                    ),
+                    Container(
+                      padding: const EdgeInsets.only(left: 12, right: 12),
+                      decoration: BoxDecoration(
+                        border: Border(
+                          right: BorderSide(color: Colors.grey, width: 1),
+                          left: BorderSide(color: Colors.grey, width: 1),
+                        ),
+                      ),
+                      child: Column(
+                        children: [
+                          Row(
+                            children: [
+                              Icon(Icons.comment, color: Colors.grey, size: 18),
+                              SizedBox(width: 6),
+                              Text(
+                                'Comments',
+                                style: TextStyle(
+                                  color: Colors.grey,
+                                  fontSize: 12,
+                                ),
+                              ),
+                            ],
+                          ),
+                          SizedBox(height: 6),
+
+                          Text(
+                            '5.2K',
+                            style: TextStyle(
+                              fontSize: 16,
+                              fontWeight: FontWeight.bold,
+                            ),
+                            textAlign: TextAlign.center,
+                          ),
+                        ],
+                      ),
+                    ),
+
+                    Container(
+                      padding: const EdgeInsets.only(left: 12, right: 12),
+                      child: Column(
+                        children: [
+                          Row(
+                            children: [
+                              Icon(Icons.list, color: Colors.grey, size: 18),
+                              SizedBox(width: 6),
+                              Text(
+                                'Parts',
+                                style: TextStyle(
+                                  color: Colors.grey,
+                                  fontSize: 12,
+                                ),
+                              ),
+                            ],
+                          ),
+                          SizedBox(height: 6),
+                          Text(
+                            '32',
+                            style: TextStyle(
+                              fontSize: 16,
+                              fontWeight: FontWeight.bold,
+                            ),
+                            textAlign: TextAlign.center,
+                          ),
+                        ],
+                      ),
+                    ),
+                  ],
+                ),
+
+                SizedBox(height: 20),
+
+                SizedBox(
+                  width: 370,
+                  height: 50,
+
+                  child: ElevatedButton(
+                    style: ElevatedButton.styleFrom(
+                      backgroundColor: Color(0xff624b81),
+                      foregroundColor: Colors.white,
+                    ),
+                    onPressed: () {
+                      // final allChapters = ChapterModel.getChapter();
+                      // Navigator.push(
+                      //   context,
+                      //   MaterialPageRoute(
+                      //     builder: (context) =>
+                      //         Story(book: book, allChapters: allChapters, initialChapterIndex: 0),
+                      //   ),
+                      // );
+                    },
+                    child: Text(
+                      'Start Reading',
+                      style: TextStyle(fontSize: 16),
+                    ),
+                  ),
+                ),
+
+                SizedBox(height: 20),
+
+                Padding(
+                  padding: const EdgeInsets.only(left: 20, right: 20),
+                  child: Text(
+                    "This Section is for summary",
+                    style: TextStyle(height: 1.8, fontSize: 16),
+                  ),
+                ),
+
+                SizedBox(height: 20),
+              ],
+            ),
+          ),
+        ],
+      ),
+    );
+  }
+}

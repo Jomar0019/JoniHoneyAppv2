@@ -107,8 +107,8 @@ class Search extends StatelessWidget {
       decoration: BoxDecoration(
         boxShadow: [
           BoxShadow(
-            color: Color(0xff1d1617).withValues(alpha: .11),
-            blurRadius: 40,
+            color: Color(0xff1d1617).withValues(alpha: .10),
+            blurRadius: 6,
             spreadRadius: 0,
           ),
         ],
@@ -118,7 +118,7 @@ class Search extends StatelessWidget {
       child: TextField(
         decoration: InputDecoration(
           filled: true,
-
+          fillColor: Colors.white,
           prefixIcon: Padding(
             padding: const EdgeInsets.all(12),
             child: Icon(Icons.search_rounded, size: 32),

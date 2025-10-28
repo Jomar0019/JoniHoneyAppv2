@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:jonihoney_app/features/books/screens/book_details.dart';
 
 class HomeWidget extends StatefulWidget {
   const HomeWidget({super.key});
@@ -21,10 +22,18 @@ class _HomeWidgetState extends State<HomeWidget> {
       ),
 
       itemBuilder: (BuildContext context, int index) {
-        return InkWell(onTap: () {}, child: ClipRRect(
-          borderRadius: BorderRadius.circular(10),
-          child: Image.asset('assets/images/HCH.png', fit: BoxFit.cover),
-        ),);
+        return InkWell(
+          onTap: () {
+            Navigator.push(
+              context,
+              MaterialPageRoute(builder: (context) => BookDetails()),
+            );
+          },
+          child: ClipRRect(
+            borderRadius: BorderRadius.circular(10),
+            child: Image.asset('assets/images/HCH.png', fit: BoxFit.cover),
+          ),
+        );
       },
     );
   }

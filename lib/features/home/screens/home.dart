@@ -29,6 +29,7 @@ class _HomeState extends State<Home> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor: Colors.white,
       appBar: AppBar(
         title: Text(
           'Jonihoney',
@@ -48,7 +49,7 @@ class _HomeState extends State<Home> {
           ),
         ],
         elevation: 0,
-        backgroundColor: Colors.transparent,
+        backgroundColor: Colors.white,
         surfaceTintColor: Colors.transparent,
       ),
       body: _widgetOptions.elementAt(_selectedIndex),
@@ -66,6 +67,7 @@ class _HomeState extends State<Home> {
       data: Theme.of(context).copyWith(
         splashColor: Colors.transparent,
         highlightColor: Colors.transparent,
+        canvasColor: Colors.white
       ),
       child: BottomNavigationBar(
         type: BottomNavigationBarType.fixed,
