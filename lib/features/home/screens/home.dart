@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:jonihoney_app/features/books/screens/books.dart';
 import 'package:jonihoney_app/features/home/widgets/home_widget.dart';
+import 'package:jonihoney_app/features/search/screens/search.dart';
 
 class Home extends StatefulWidget {
   const Home({super.key});
@@ -15,8 +16,8 @@ class _HomeState extends State<Home> {
   static final List<Widget> _widgetOptions = <Widget>[
     HomeWidget(),
     Books(),
-    const Center(child: Text('Search')),
-    const Center(child: Text('Notification')),
+    Search(),
+    const Center(child: Text('Notifications')),
   ];
 
   void _onItemTapped(int index) {
